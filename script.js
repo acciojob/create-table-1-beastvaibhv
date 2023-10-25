@@ -1,13 +1,13 @@
 function insert_Row() {
-	let count = 1;
-    const table = document.getElementById("sampleTable"); 
-	const row = document.createElement("tr");
-	const rowData1 = document.createElement("td");
-	const rowData2 = document.createElement("td");
-	row.appendChild(rowData1);
-	row.appendChild(rowData2);
-	row.firstChild.textContent ="New Cell1";
-	row.lastChild.textContent ="New Cell2";
-	table.insertBefore(row, table.firstChild);
+	 const table = document.getElementById("sampleTable"); // Get the table by its id
+  const row = table.insertRow(0); // Insert a new row at the top (position 0)
+
+  // Create the first cell (left cell) and set its content
+  const cell1 = row.insertCell(0);
+  cell1.textContent = "New Cell1";
+
+  // Create the second cell (right cell) and set its content
+  const cell2 = row.insertCell(1);
+  cell2.textContent = "New Cell2";
   
 }
